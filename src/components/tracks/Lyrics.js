@@ -30,24 +30,24 @@ class Lyrics extends Component {
         } else {
             return (
                 <React.Fragment>
-                    <Link to="/" className="btn btn-dark btn-sm mb-4">Go back!</Link>
-                    <div className="card">
-                        <h5 className="card-header">
+                    <Link to="/" className="btn btn-warning btn-sm mb-4 p-2">Go back!</Link>
+                    <div className="card" style={{backgroundColor: "#403D39"}}>
+                        <h3 className="card-header">
                             {track.track_name}  <span className="text-secondary"> - {' '} {track.artist_name}</span>
-                        </h5>
+                        </h3>
                         <div className="card-body">
                              <p className="card-text">{lyrics.lyrics_body}</p>
                         </div>
                     </div>
                     <ul className="Link-group mt-3">
-                        <li className="list-group-item">
-                            <strong>Album: </strong> {track.album_name}
+                        <li className="list-group-item" style={{backgroundColor:"#CCC5B9"}}>
+                            <h4 style={{color: "#403D39", display: "inline"}}>Album: </h4> {track.album_name}
                         </li>
-                        <li className="list-group-item">
-                            <strong>Genre: </strong> {track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
+                        <li className="list-group-item" style={{backgroundColor:"#CCC5B9"}}>
+                            <h4 style={{color: "#403D39", display: "inline"}}>Genre: </h4> {track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
                         </li>
-                        <li className="list-group-item">
-                            <strong>Explicit words: </strong> 
+                        <li className="list-group-item" style={{backgroundColor:"#CCC5B9"}}>
+                            <h4 style={{color: "#403D39", display: "inline"}}>Explicit words: </h4> 
                             {track.explicit === 0 ? 'No' : 'Yes'}
                         </li>
                     </ul>

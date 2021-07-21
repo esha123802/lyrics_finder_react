@@ -49,10 +49,10 @@ class Top extends Component {
                             <form onSubmit={this.findTrack.bind(this, dispatch)}>
                                 <div className="row md-0 d-flex justify-content-center">
                                     <div className="col-md-4">
-                                        <button className="btn btn-warning btn-lg btn-block p-3"
+                                        <button className="btn btn-lg btn-block p-3 mb-3"
                                             type="submit" onClick={() => (this.state.button = 1)}>Top Tracks - India</button></div>
                                     <div className="col-md-4">
-                                        <button className="btn btn-warning btn-lg btn-block p-3"
+                                        <button className="btn btn-lg btn-block p-3"
                                             type="submit" onClick={() => (this.state.button = 2)}>Top Tracks - World</button></div>
                                 </div>
                             </form>

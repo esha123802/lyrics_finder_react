@@ -48,14 +48,14 @@ class Search extends Component {
                 {value => {
                     const { dispatch } = value;
                     return (
-                        <div className="card card-body mb-4 p-4">
-                            <h1 className="display-4 text-center"><i className="fa fa-music" style={{marginRight: "3%"}}></i>Search for a Song/Artist</h1>
+                        <div className="card card-body mb-4 p-4" style={{backgroundColor: "#403D39"}}>
+                            <h1 className="text-center" id="search"><i className="fa fa-music" style={{marginRight: "3%"}}></i>Search for a Song/Artist</h1>
                             <p className="lead text-center">Get the lyrics for any song</p>
                             <form onSubmit={this.findTrack.bind(this, dispatch)}>
                                 <div className="form-group">
                                     <input type="text"
                                         className="form-control form-control-lg"
-                                        style={{height: "40px"}}
+                                        style={{height: "40px", backgroundColor: "#CCC5B9", color: "FFFCF2"}}
                                         placeholder="Song title..."
                                         name="trackTitle"
                                         value={this.state.trackTitle}
@@ -63,11 +63,11 @@ class Search extends Component {
                                     </input>
                                 </div>
                                 <div className="row m-0 d-flex justify-content-center">
-                                    <div className="col-md-3">
-                                        <button className="btn btn-primary btn-lg btn-block"
+                                    <div className="col-md-6">
+                                        <button className="btn btn-warning btn-lg btn-block p-2 mb-2" style={{color: "#252422"}}
                                             type="submit" onClick={() => (this.state.button = 1)} >Search Track</button></div>
-                                    <div className="col-md-3">
-                                        <button className="btn btn-primary btn-lg btn-block"
+                                    <div className="col-md-6">
+                                        <button className="btn btn-warning btn-lg btn-block p-2" style={{color: "#252422"}}
                                             type="submit" onClick={() => (this.state.button = 2)}>Search Artist</button></div>
                                 </div>
                             </form>
